@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <title>OnePage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container{
+        max-width: 1250px;
+        margin:0 auto;
+      }
+      /* 헤더부분 */
+      .header-box{
+        justify-content: flex-end;
+        padding: 0px;
+        display: flex;
+        margin-top: 24px;
+        margin-right: 204px;
+      }
+      .header-box > li{
+        list-style: none;
+        border-right: 1px solid #2C2C2C;
+        padding: 0px 15px;
+      }
+      .header-box a {
+        text-decoration: none;
+        color: #2C2C2C;
+      }
+      .header-box a:hover {
+        text-decoration: none;
+        color: rgb(142, 142, 142);
+        text-decoration: underline;
+      }
+      .header-box > li:last-child{
+        border-right: none;
+        padding-right: 0px;
+      }
+      .info-go-now {
+        margin-left: 5px;
+      }
+
+      /* 네브바 부분 */
+      .navbar-wrapper{
+        margin-top: 30px;
+        width :100%
+      }
+      .navbar-box{
+        display: flex;
+        justify-content: space-between;
+        gap: 60px;
+      }
+      .navbar-text{
+        width: 75%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .navbar-text > div{
+        text-align: center;
+        width: 15%;
+      }
+      .info-a {
+        text-decoration: none;
+        color: black;
+        font-weight: 400;
+        font-size: 18px;
+      }
+      .info-a:hover {
+        color: rgb(171, 171, 171);
+        text-decoration: underline;
+      }
+      .navbar-btn{
+        width: 25%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+      }
+      .logo-img-box{
+        text-align: right;
+      }
+      .logo-img{
+        width : 50%;
+      }
+      .support-btn{
+        width: 50%;
+        height: 52px;
+        border: none;
+        padding: 0px 15px;
+        background-color: gainsboro;
+      }
+      .donation-btn{
+        width: 50%;
+        background-color: #39A193;
+        height: 52px;
+        border: none;
+        padding: 0px 15px;
+      }
+      .support-btn a {
+        font-weight: 400;
+        font-size: 14px;
+        text-decoration: none;
+        color: black;
+      }
+      .donation-btn a {
+        font-weight: 400;
+        font-size: 18px;
+        text-decoration: none;
+        color: black;
+      }
+      .donation-btn:hover {
+        background-color: rgb(11, 94, 81);
+      }
+      .support-btn:hover {
+        background-color: rgb(45, 45, 45);
+      }
+      .donation-btn a:hover {
+        color: white;
+        text-decoration: underline;
+      }
+      .support-btn a:hover {
+        color: white;
+        text-decoration: underline;
+      }
+
+
+      /* 배너 부분*/
+      .banner-wrapper{
+        background-image: url("https://i.postimg.cc/prGK3BQV/photo-1646195151271-e4d9f28abcc7-ixlib-rb-1-2.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 435px;
+        margin-top: 28px;
+      }
+      .banner-text{
+        padding-top: 270px;
+        padding-left: 189px;
+      }
+      .banner-text > h3{
+        font-size: 48px;
+        color:#fff;
+        margin:0px;
+      }
+      .banner-text > h4{
+        font-size: 40px;
+        color:#fff;
+        margin:0px;
+      }
+
+      /* 섹션 1*/
+      .container-one{
+        margin-top: 70px;
+      }
+      .dontaion-wrapper{
+        display: flex;
+        gap: 19px;
+        margin-top: -28px;
+      }
+      .dontaion-title{
+        color: #B42222;
+        font-size: 32px;
+        margin-bottom: 4px;
+      }
+      .donation-sub-title{
+        color: #3F3F3F;
+        font-size: 20px;
+      }
+      .money-info-box{
+        display: flex;
+      }
+      .money-info-box > div {
+        margin-top: 22px;
+      }
+      .money-text{
+        color: #676767;
+        font-size: 32px;
+        margin-left: 12px;
+      }
+      .money-text > span{
+        color: #ED1D1D;
+        font-size: 60px;
+        font-weight: bold;
+      }
+      .child-info-box{
+        width: 40%;
+        border-top: 1px solid #9A9A9A;
+        margin-top: 46px;
+      }
+      .info-more-box{
+        display: flex;
+        padding-top: 60px;
+        gap: 18px;
+      }
+      .new-info {
+        font-size: 24px;
+        font-weight: 800px;
+      }
+      .more-button {
+        font-size: 24px;
+        font-weight: 800px;
+        width: 109px;
+        height: 43px;
+      }
+      .container-one-item-two{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 65%;
+      }
+      .donation-text{
+        color: #4E4E4E;
+        font-size:16px;
+        height: 77px;
+        border-left: 2px solid #e9e9e9;
+        padding-left: 19px;
+      }
+      .donation-right-now{
+        display: flex;
+        font-size: 30px;
+        background-color: #055a57;
+        border-radius: 100px;
+        width: 185px;
+        height: 185px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+      }
+      .donation-right-now > div > a {
+        text-decoration: none;
+        color: white;
+      }
+
+
+      .info-picture-box img {
+        width: 100%;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      }
+      .info-picture-box{
+        display: flex;
+        justify-content: space-between;
+        gap: 86px;
+        margin-top: 30px;
+        overflow:auto;
+      }
+      .info-picture-box > div{
+        width: 33%;
+        min-width: 200px;
+      }
+      .goto-new {
+        margin-top: 19px;
+        font-weight: 520;
+        font-size: 16px;
+        color: #CF0000;
+        text-decoration: underline;
+      }
+      .new-title {
+        font-weight: 550;
+        font-size: 20px;
+        margin-top: 16px;
+      }
+      .new-date {
+        margin-top: 24px;
+        font-weight: 300;
+        font-size: 14px;
+        color: #858585;
+      }
+
+      /*-섹션 2-*/
+      .container-two {
+        display: flex;
+        margin-top: 40px;
+      }
+      .container-two > div {
+        width: 50%;
+        justify-content: space-between;
+        text-align: center;
+        background-color: #0ab35c7e;
+      }
+      .container-two > div:last-child {
+        background-color: #198674a3;
+      }
+      .button-wrapper {
+        margin-top: 22px;
+        margin-bottom: 31px;
+      }
+      .button-box {
+        line-height: 65px;
+        background-color: #00483f;
+        width: 391px;
+        height: 64px;
+        margin: 0 auto;
+      }
+      .button-box a {
+        font-weight: 900;
+        font-size: 24px;
+        color: white;
+        text-decoration: none;
+      }
+      .button-box a:hover {
+        color: rgb(167, 167, 167);
+        text-decoration: underline;
+      }
+      .text-box p:first-child {
+        margin-top: 41px;
+      }
+      .text-box p:nth-child(2) {
+        margin-top: 19px;
+        font-weight: 400;
+        font-size: 35px;
+      }
+      .text-box p:nth-child(3) {
+        margin-top: 35px;
+        font-weight: 550;
+        font-size: 16px;
+      }
+      .text-box p:nth-child(4) {
+        margin-bottom: 22px;
+      }
+
+      /*-섹션 3-*/
+      .container-three {
+        margin-top: 60px;
+      }
+      .text-collecter {
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .container-three p:first-child {
+        margin-bottom: 12px;
+        font-weight: 700;
+        font-size: 28px;
+        color: #383838
+      }
+      .container-three p:last-child {
+        font-weight: 300;
+        font-size: 16px;
+        color: #444444;
+      }
+      .attract-box {
+        display: flex;
+      }
+      .youtube-link {
+        margin-top: 23px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        align-items: center;
+        width: 1059px; height: 533px;
+        text-align: center;
+        justify-content: space-between;
+      }
+
+      /*page2에서 잘라온거*/
+      .contant-three {
+        margin-top: 64px;
+      }
+      .last-wrapper {
+        display: flex;
+        width: 1220px;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .last-wrapper div {
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+      }
+      .note-img {
+        width: 109px;
+      }
+      .report-text {
+        font-weight: 500;
+        font-size: 24px;
+        margin-top: 8px;
+      }
+      .report-news {
+        margin-top: 8px;
+        font-weight: 300;
+        font-size: 16px;
+      }
+      /*푸터*/
+      footer {
+        margin-top: 80px;
+        background-color: #fafbfc;
+        width: 100%;
+        height: 230px;
+        display:flex;
+        flex-direction: column;
+      }
+      .copyright:first-child{
+        padding-top: 55px;
+        text-align: center;
+      }
+      .copyright-content{
+        padding-top: 10px;
+        text-align: center;
+        font-size: 18px;
+        color: #666;
+      }
+      .full-color {
+        display:flex;
+        flex-direction: column;
+        background: #545454;
+        width: 100%;
+        height: 54px;
+        text-align: center;
+      }
+      .full-color ul {
+        justify-content: center;
+        align-items: center;
+      }
+      .full-color li {
+        flex-direction: row;
+        list-style: none;
+        color: white;
+        list-style: none;
+        padding: 4px 20px;
+        text-align: center;
+        justify-items: center;
+      }
+      .full-color-wrapper {
+        justify-content: flex-end;
+        padding: 16px 20px;
+        display: flex;
+        align-items: center;
+      }
+      .text-bold {
+        font-size: 24px;
+        color: #666;
+        font-weight: 600;
+        margin-left: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header-wrapper">
+      <ul class="header-box">
+        <li><a href="#">로그인</a></li>
+        <li><a href="#">회원가입</a></li>
+        <li><a href="#">기부금 영수증</a></li>
+        <li><a href="#">Q&A</a></li>
+        <li>
+          <input class="haeder-search-box"/><input type="submit" value="검색" class="info-go-now"/>
+        </li>
+      </ul>
+    </header>
+
+    <!--/////// 네브바 영역 /////// -->
+    <section class="navbar-wrapper container">
+      <div class="navbar-box">
+        <div class="navbar-text">
+          <div class="logo-img-box">
+            <a href="page01.html"><img src="https://i.postimg.cc/tgzjhDy8/VMBC-Tree-Icon-RGB-Full-Colour.png" class="logo-img"/></a> 
+          </div>
+          <div><a href="#" class="info-a">소개</a></div>
+          <div><a href="#" class="info-a">활동</a></div>
+          <div><a href="#" class="info-a">참여</a></div>
+          <div><a href="#" class="info-a">후원</a></div>
+          <div><a href="#" class="info-a">스토리</a></div>          
+        </div>
+        <div class="navbar-btn">
+          <button class="support-btn"><a href="#">구호 활동가 지원</a></button>
+          <button class="donation-btn"><a href="page02.html">후원하기</a> </button>
+        </div>
+      </div>
+    </section>
+
+    <!--/////// 배너영역 //////// -->
+    <section class="banner-wrapper">
+      <div class="banner-text">
+        <h3>
+          우크라이나 전쟁 대응
+        </h3>
+        <h4>
+          (7월 4일 긴급 소식)
+        </h4>
+      </div>
+    </section>
+
+    <!--/////// 컨테이너 영역1 //////// -->
+    <section class="container-one container">
+      <!--위쪽 -->
+      <div class="dontaion-wrapper">
+        <div class="container-one-item-one">
+          <!-- //왼쪽// -->
+          <div class="child-info-one">
+            <div class="donation-money-box">
+              <div class="dontaion-title">
+                굶주리는 우크라이나 아이들
+              </div>
+              <div class="donation-sub-title">
+                당신의 손길로 이들을 굶주림에서 구원할 수 있습니다.
+              </div>
+              <div class="money-info-box">
+                <div>
+                  <img src="https://i.postimg.cc/fT18LwXz/malnutricion.png"/>
+                </div>
+                <div class="money-text">
+                  <span>50,000</span>원
+                </div>
+              </div>
+            </div>          
+            <div class="child-info-box">
+               <div class="info-more-box">
+                  <div class="new-info">소식</div>
+                  <button class="more-button">+more</button>
+               </div>
+            </div>
+          </div>
+        </div>
+        <!-- //오른쪽// -->
+        <div class="container-one-item-two">
+          <div class="donation-text">
+            영양실조 어린이 1명에게 영양치료식을 5주동안 제공할 수 있습니다. 
+          </div>
+          <div class="donation-right-now">
+            <div>
+              <a href="page02.html"> 지금<br/>후원하기</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--아래쪽-->
+      <div class="info-picture-box">
+        <div>
+          <img src="https://i.postimg.cc/nV5FRdMP/MSB127249-Medium-0.jpg"/>
+          <div>
+            <div class="goto-new">현장소식</div>
+            <div class="new-title">국경없는의사회의 우크라이나 전쟁 대응 (7월 4일 업데이트)</div>
+            <div class="new-date">2022.07.04</div>
+          </div>
+        </div>
+        <div>
+          <img src="https://i.postimg.cc/66D726Vq/MSF306557-Medium.jpg"/>
+          <div>
+            <div class="goto-new">현장소식</div>
+            <div class="new-title">러시아 전쟁으로 인해 집을 잃은 우크라이나 국민들</div>
+            <div class="new-date">2022.06.27</div>
+          </div>
+        </div>
+        <div>
+          <img src="https://i.postimg.cc/xCMw6PZW/MSB125739-Web-thumbnail.jpg"/>
+          <div>
+            <div class="goto-new">현장소식</div>
+            <div class="new-title">우크라이나: 중부 지역에서 약 35만 명의 피란민을 지원하고 있습니다</div>
+            <div class="new-date">2022.06.02</div>
+          </div>
+        </div>
+      </div>
+      <div class="info-picture-box">
+        <div>
+          <img src="https://i.postimg.cc/Yq6SDrzh/Youngwoongkim-thumbnail-web-800x600-2.jpg"/>
+          <div>
+            <div class="goto-new">채용영상</div>
+            <div class="new-title">국경없는의사회의 우크라이나 전쟁 대응 (7월 4일 업데이트)</div>
+            <div class="new-date">2022.07.04</div>
+          </div>
+        </div>
+        <div>
+          <img src="https://i.postimg.cc/2jvj3kJ2/DSC00096.jpg"/>
+          <div>
+            <div class="goto-new">활동이야기</div>
+            <div class="new-title">시에라리온: 소아 사망률을 줄이기 위한 항가 소아병원에서의 활동</div>
+            <div class="new-date">2022.05.18</div>
+          </div>
+        </div>
+        <div>
+          <img src="https://i.postimg.cc/7hX18pFz/03-MFSK-WEB-Thumbnail.jpg"/>
+          <div>
+            <div class="goto-new">긴급</div>
+            <div class="new-title">FOCUS: 우크라이나 긴급 대응</div>
+            <div class="new-date">2022.07.04</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--/////// 컨테이너 영역2 //////// -->
+    <section class="container-two">
+      <!-- 왼쪽 -->
+      <div>
+        <div class="text-box">
+          <p>JOIN YOUR TEAM</p>
+          <p>
+            국경을 넘는 구호활동가 <br>
+            다음은 당신입니다. 
+          </p>
+          <p>국경을 초월한 인도주의 긴급구호활동</p>
+        </div>
+          <div class="button-wrapper">
+          <div class="button-box"><a href="#">구호활동가 참여</a></div>
+          </div>
+      </div>
+      <!-- 오른쪽 -->
+      <div>
+        <div class="text-box">
+          <p>DONATE NOW</p>
+          <p>
+            당신의 후원이  <br>
+            세상을 치료합니다.
+          </p>
+          <p>지금 후원을 시작해주세요.</p>
+        </div>
+        <div class="button-wrapper">
+          <div class="button-box"><a href="#">구호활동가 참여</a></div>
+        </div>
+      </div>
+    </section>
+
+    <!--/////// 컨테이너 영역3 //////// -->
+    <section class="container-three">
+      <div class="attract-box">
+        <div class="text-collecter">
+          <p>우크라이나 전쟁 대응</p>
+          <p>벨기에 브뤼셀 물류창고에서 우크라이나로 긴급 구호 물자를 수송하고 있습니다. 수술키트, 외상키트, <br>
+            만성질환 치료제, 대규모 사상자 대응 물자 등 120㎥ 분량의 물자를 3대의 트럭에 싣고 수송 중입니다.</p>
+            <iframe class="youtube-link" src="https://www.youtube.com/embed/KeS-mB_-G5A" title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+    
+    <section class="contant-three">
+      <div class="last-wrapper">
+        <div>
+          <img class="note-img" src="https://i.postimg.cc/SRbdyHGK/image.png">
+          <p class="report-text">후원금 재정보고</p>
+          <p class="report-news">
+            후원금 81% 이상은 <br>
+            현장 활동비로 사용됩니다.
+          </p>
+        </div>
+        <div>
+          <img class="note-img" src="https://i.postimg.cc/zvqh2NjT/gmail.png">
+          <p class="report-text">활동가<br>이야기</p>
+          <p class="report-news">
+            국경없는의사회 활동가가 <br>
+            전하는 현장 소식을 읽어보세요.
+          </p>
+        </div>
+        <div>
+          <img class="note-img" src="https://i.postimg.cc/ZnfWfd0h/2253819.png">
+          <p class="report-text">창고</p>
+          <p class="report-news">
+            구호물품으로<br>
+            후원에 참여하세요.</p>
+        </div>
+      </div>
+    </section>
+
+    <!--/////// Footer //////// -->
+    <footer>
+      <div class="copyright">@COPYRIGHT VOLUNTEER GROUP</div>
+      <div class="copyright-content">
+        서울시 강남구 테헤란로 443 애플트리타워 9층<br>
+        대표자 : 드쿠론랄프아하누 |<br>
+        고유번호 : 101-82-21115 <br>
+        후원문의:<span class="text-bold">02-3703-3555</span><br>
+    </footer>
+    <div class="full-color">
+      <ul class="full-color-wrapper">
+        <li>월드세이브</li>
+        <li>|</li>
+        <li>이용약관</li>
+        <li>|</li>
+        <li>개인정보처리방침</li>
+      </ul>
+    </div>
+  </body>
+</html>

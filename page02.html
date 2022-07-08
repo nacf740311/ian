@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <title>OnePage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container{
+        max-width: 1250px;
+        margin:0 auto;
+      }
+      /* 헤더부분 */
+      .header-box{
+        justify-content: flex-end;
+        padding: 0px;
+        display: flex;
+        margin-top: 24px;
+        margin-right: 204px;
+      }
+      .header-box > li{
+        list-style: none;
+        border-right: 1px solid #2C2C2C;
+        padding: 0px 15px;
+      }
+      .header-box a {
+        text-decoration: none;
+        color: #2C2C2C;
+      }
+      .header-box a:hover {
+        text-decoration: none;
+        color: rgb(142, 142, 142);
+        text-decoration: underline;
+      }
+      .header-box > li:last-child{
+        border-right: none;
+        padding-right: 0px;
+      }
+      .info-go-now {
+        margin-left: 5px;
+      }
+      /* 네브바 부분 */
+      .navbar-wrapper{
+        margin-top: 30px;
+        width :100%
+      }
+      .navbar-box{
+        display: flex;
+        justify-content: space-between;
+        gap: 60px;
+      }
+      .navbar-text{
+        width: 75%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .navbar-text > div{
+        text-align: center;
+        width: 15%;
+      }
+      .info-a {
+        text-decoration: none;
+        color: black;
+        font-weight: 400;
+        font-size: 18px;
+      }
+      .info-a:hover {
+        color: rgb(171, 171, 171);
+        text-decoration: underline;
+      }
+      .navbar-btn{
+        width: 25%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+      }
+      .logo-img-box{
+        text-align: right;
+      }
+      .logo-img{
+        width : 50%;
+      }
+      .support-btn{
+        width: 50%;
+        height: 52px;
+        border: none;
+        padding: 0px 15px;
+        background-color: gainsboro;
+      }
+      .donation-btn{
+        width: 50%;
+        background-color: #39A193;
+        height: 52px;
+        border: none;
+        padding: 0px 15px;
+      }
+      .donation-btn a {
+        text-decoration: none;
+        color: black;
+        font-weight: 400;
+        font-size: 18px;
+      }
+      .support-btn a {
+        font-weight: 400;
+        font-size: 14px;
+        text-decoration: none;
+        color: black;
+      }
+      .donation-btn a:hover {
+        color: white;
+        text-decoration: underline;
+      }
+      .support-btn a:hover {
+        color: white;
+        text-decoration: underline;
+      }
+      .support-btn:hover {
+        background-color: rgb(45, 45, 45);
+      }
+
+      /*배너 부분*/
+      .banner-wrapper{
+        background-image: url("https://i.postimg.cc/pXdg7S0t/volunteer-service-6772198-1280.jpg");
+        background-repeat: no-repeat;
+        width: 100%;
+        background-size: cover;
+        background-position-y: center;
+        height: 500px;
+        margin-top: 28px;
+      }
+
+      /*컨텐츠 부분1*/
+      .contant-one {
+        display: flex;
+        flex-direction: column;
+      }
+      .donation-box {
+        margin-top: 44px;
+        font-weight: 700;
+        font-size: 36px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+      }
+      .donation-content {
+        width: 930px;
+        height: 107px;
+        margin-top: 20px;
+        font-weight: 200;
+        font-size: 16px;
+        color: #4E4E4E;
+        border:  0.5px solid black;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .donation-content p {
+        padding: 35px 60px;
+        text-align: center;
+      }
+
+      /*컨텐트 부분2*/
+      .contant-two {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .img-wrapper {
+        width: 1220px;
+        height: 540px;
+        justify-content: center;
+        display: flex;
+        gap: 8px 36px;
+        flex-wrap: wrap;
+      }
+      .contant-two div {
+        flex-direction: row;
+      }
+      .contant-two a {
+        text-decoration: none;
+
+        height: 800px;
+      }
+      .contant-two img {
+        width: 351px;
+        height: 234px;
+      }
+      .center-maker h2 {
+        font-weight: 200;
+        font-size: 28px;
+        color: rgb(0, 0, 0);
+        text-align: center;
+      }
+      .img-wrapper img:hover{
+        -webkit-transition: -webkit-transform 0.35s;
+        -moz-transition: -moz-transform 0.35s;
+        -o-transition: -o-transform 0.35s;
+        transition: 0.35s;
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1.1)
+      }
+      .img-wrpper-all {
+        background-color: #461508;
+      }
+
+      /*컨텐트 부분3*/
+      .contant-three {
+        margin-top: 58px;
+      }
+      .last-wrapper {
+        display: flex;
+        width: 1220px;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .last-wrapper div {
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+      }
+      .note-img {
+        width: 109px;
+      }
+      .report-text {
+        font-weight: 500;
+        font-size: 24px;
+        margin-top: 8px;
+      }
+      .report-news {
+        margin-top: 8px;
+        font-weight: 300;
+        font-size: 16px;
+      }
+
+            /*푸터*/
+      footer {
+        margin-top: 67px;
+        text-align: center;
+        background-color: #fafbfc;
+        width: 100%;
+        height: 230px;
+        display:flex;
+        flex-direction: column;
+      }
+      .copyright:first-child{
+        padding-top: 55px;
+      }
+      .copyright-content {
+        padding-top: 10px;
+      }
+      .full-color {
+        display:flex;
+        flex-direction: column;
+        background: #545454;
+        width: 100%;
+        height: 62px;
+        text-align: center;
+      }
+      .full-color ul {
+        justify-content: center;
+        align-items: center;
+      }
+      .full-color li {
+        flex-direction: row;
+        list-style: none;
+        color: white;
+        list-style: none;
+        padding: 4px 20px;
+        text-align: center;
+      }
+      .full-color-wrapper {
+        justify-content: flex-end;
+        padding: 16px 20px;
+        display: flex;
+      }
+    </style>
+    </head>
+    <body>
+      <header class="header-wrapper">
+        <ul class="header-box">
+          <li><a href="#">로그인</a></li>
+          <li><a href="#">회원가입</a></li>
+          <li><a href="#">기부금 영수증</a></li>
+          <li><a href="#">Q&A</a></li>
+          <li>
+            <input class="haeder-search-box"/><input type="submit" value="검색" class="info-go-now"/>
+          </li>
+        </ul>
+      </header>
+  
+      <!--/////// 네브바 영역 /////// -->
+      <section class="navbar-wrapper container">
+        <div class="navbar-box">
+          <div class="navbar-text">
+            <div class="logo-img-box">
+              <a href="page01.html"><img src="https://i.postimg.cc/tgzjhDy8/VMBC-Tree-Icon-RGB-Full-Colour.png" class="logo-img"/></a> 
+            </div>
+            <div><a href="#" class="info-a">소개</a></div>
+            <div><a href="#" class="info-a">활동</a></div>
+            <div><a href="#" class="info-a">참여</a></div>
+            <div><a href="#" class="info-a">후원</a></div>
+            <div><a href="#" class="info-a">스토리</a></div>          
+          </div>
+          <div class="navbar-btn">
+            <button class="support-btn"><a href="#">구호 활동가 지원</a></button>
+            <button class="donation-btn"><a href="page02.html">후원하기</a> </button>
+          </div>
+        </div>
+      </section>
+
+      <!--배너 영역-->
+      <section class="banner-wrapper">
+        <div class="banner-text">
+        </div>
+      </section>
+
+      <!--컨텐츠 내용1-->
+      <section class="contant-one">
+        <div class="donation-box">후원</div>
+        <div class="donation-content">
+          <p> 우리단체의 활동을 움직이는 것은 우리를 지지해주시는 후원자와 서포터즈, 바로 여러분입니다.<br>
+          정기후원과 일시후원 및 거리 캠페인과 이벤트를 통해 다양한 활동에 참여하실 수 있습니다. 
+          </p>
+        </div>
+      </section>
+
+      <!--컨텐츠 내용2-->
+      <section class="contant-two">
+        <div class="wrapper-wrapper">
+          <div class="img-wrapper">
+            <div>
+              <a href="#" class="img-one">
+                <div class="img-wrapper-all">
+                <img src="https://i.postimg.cc/X7kFm2z4/poor-2754335-1280.jpg">
+                </div>
+                <div class="center-maker">
+                  <h2>정기후원</h2>
+                </div>
+              </a>
+            </div>
+            <div>
+              <a href="#" class="img-two">
+                <div class="img-wrapper-all">
+                <img src="https://i.postimg.cc/ZqK1pD1R/india-2507482-1280.jpg">
+                </div>
+                <div class="center-maker">
+                  <h2>일시후원</h2>
+                </div>
+              </a>
+            </div>
+            <div>
+              <a href="#" class="img-three">
+                <div class="img-wrapper-all">
+                <img src="https://i.postimg.cc/rm5V0t59/people-3144645-1280.jpg">
+                </div>
+                <div class="center-maker">
+                  <h2>기념일 기부</h2>
+                </div>
+              </a>
+            </div>
+            <div>
+              <a href="#" class="img-four">
+                <div class="img-wrapper-all">
+                <img src="https://i.postimg.cc/T19TQM7L/children-60654-1280.jpg">
+                </div>
+                <div class="center-maker">
+                  <h2>유산기부</h2>
+                </div>
+              </a>
+            </div>
+            <div>
+              <a href="#" class="img-five">
+                <div class="img-wrapper-all">
+                <img src="https://i.postimg.cc/gkgYZpL1/girl-3717166-1280.jpg">
+                </div>
+                <div class="center-maker">
+                  <h2>기업후원</h2>
+                </div>
+              </a>
+            </div>
+            <div>
+              <a href="#" class="img-six">
+                <div class="img-wrapper-all">
+                <img src="https://i.postimg.cc/MT0wKJ8P/people-1550504-1280.jpg">
+                </div>
+                <div class="center-maker">
+                  <h2>병원후원</h2>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--//////컨텐트 내용3//////-->
+      <section class="contant-three">
+        <div class="last-wrapper">
+          <div>
+            <img class="note-img" src="https://i.postimg.cc/SRbdyHGK/image.png">
+            <p class="report-text">후원금 재정보고</p>
+            <p class="report-news">
+              후원금 81% 이상은 <br>
+              현장 활동비로 사용됩니다.
+            </p>
+          </div>
+          <div>
+            <img class="note-img" src="https://i.postimg.cc/zvqh2NjT/gmail.png">
+            <p class="report-text">활동가<br>이야기</p>
+            <p class="report-news">
+              국경없는의사회 활동가가 <br>
+              전하는 현장 소식을 읽어보세요.
+            </p>
+          </div>
+          <div>
+            <img class="note-img" src="https://i.postimg.cc/ZnfWfd0h/2253819.png">
+            <p class="report-text">창고</p>
+            <p class="report-news">
+              구호물품으로<br>
+              후원에 참여하세요.</p>
+          </div>
+        </div>
+      </section>
+
+          <!--/////// Footer //////// -->
+      <footer>
+          <div class="copyright">@COPYRIGHT VOLUNTEER GROUP</div>
+          <div class="copyright-content">
+            서울시 강남구 테헤란로 443 애플트리타워 9층<br>
+            대표자 : 드쿠론랄프아하누 |<br>
+            고유번호 : 101-82-21115 <br>
+            후원문의:<span class="text-bold">02-3703-3555</span><br>
+      </footer>
+      <div class="full-color">
+        <ul class="full-color-wrapper">
+          <li>월드세이브</li>
+          <li>|</li>
+          <li>이용약관</li>
+          <li>|</li>
+          <li>개인정보처리방침</li>
+        </ul>
+      </div>
+    </body>
+</html>
